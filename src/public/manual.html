@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>REST API Manual</title>
 </head>
 <body>
-App with simplest REST API.
-
-For db setup
+<h3>App with simplest REST API.</h3>
 <p>
+For db setup
+</p>
 <pre>db: {
     host: 'localhost', // server name or IP address;
     port: 5432, // PG server port
@@ -17,20 +17,21 @@ For db setup
     password: 'api_platform'
     }
 </pre>
-</p>
+
 
 
 <p>
     Node setup.
+</p>
 <pre>
     $npm install
 </pre>
 
-</p>
+
 
 <p>
     DB Schema script: ./config/init_migration.sql
-
+</p>
 <pre>
     CREATE TABLE client
     (
@@ -41,7 +42,24 @@ For db setup
     );
 
 </pre>
+
+<p>
+    REST INVOCATIONS
 </p>
+<pre>
+    GET  '/api/clients'  search by GET params like "?phone=442071234567"
+    POST '/api/client' payload  like
+    {
+      "phone": "+442071234566",    // required
+      "email": "test@email2.com",  // required
+      "some": "value",
+      "add": "test"
+    }
+
+    PUT '/api/client/:id' the sayme payload except ID nothing is manadatory;
+    DELETE '/api/client/:id' only ID required success 204 status;
+</pre>
+
 
 
 </body>
