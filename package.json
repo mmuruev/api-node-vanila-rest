@@ -1,0 +1,21 @@
+{
+  "name": "api-node-vanila-rest",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "google-libphonenumber": "^2.0.14",
+    "node-validator": "^0.1.26",
+    "pg-promise": "^5.6.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "MIT",
+  "description": "Simple REST API implementation"
+}

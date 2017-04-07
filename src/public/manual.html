@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+App with simplest REST API.
+
+For db setup
+<p>
+<pre>db: {
+    host: 'localhost', // server name or IP address;
+    port: 5432, // PG server port
+    database: 'api_platform',
+    user: 'api_platform',
+    password: 'api_platform'
+    }
+</pre>
+</p>
+
+
+<p>
+    Node setup.
+<pre>
+    $npm install
+</pre>
+
+</p>
+
+<p>
+    DB Schema script: ./config/init_migration.sql
+
+<pre>
+    CREATE TABLE client
+    (
+    	id serial primary key,
+    	phone varchar(35) not null,
+    	email varchar(255) not null,
+    	data json not null
+    );
+
+</pre>
+</p>
+
+
+</body>
+</html>
